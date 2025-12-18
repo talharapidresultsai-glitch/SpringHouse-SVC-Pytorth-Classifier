@@ -1,0 +1,9 @@
+train: /opt/ml/input/data/train_xval/images/train/ 
+val:  /opt/ml/input/data/train_xval/images/val/
+test: /opt/ml/input/data/train_xval/images/test/
+
+# number of classes
+nc: 5
+
+# class names
+names: ["Kraft Philadelphia Regular Cream Cheese Spread", "Chobani Greek Yogurt Mango On The Bottom", "Orange", "Gluten-free Soy Sauce", "Green Apple"]

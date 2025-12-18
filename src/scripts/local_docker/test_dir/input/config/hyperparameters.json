@@ -1,0 +1,13 @@
+{
+    "run_name": "wk1-4",
+    "train_path":"H:/2022-10-05-wk1-4-plus/input/data/train_xval",
+    "img_size":384,
+    "batch_size": 8,
+    "train_augmentation": true,
+    "crop": true,
+    "class_count": 725,
+    "epochs": 2,
+    "force_class_id_name_length_match":false,
+    "best_model_pick":"val_loss",
+    "gpu_count":1
+}

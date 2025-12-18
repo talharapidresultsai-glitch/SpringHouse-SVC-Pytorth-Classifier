@@ -1,0 +1,11 @@
+Exception during training: [Errno 2] No such file or directory: 'F:\\7_12_pkg_zoom/images/train'
+Traceback (most recent call last):
+  File "/opt/program/train", line 38, in train
+    train_main(**trainingParams)
+  File "/opt/program/train_model.py", line 33, in train_main
+    trainloader, valloader, testloader = get_data_loaders(train_path, img_size, batch_size=batch_size, train_augmentation=train_augmentation, crop=crop)
+  File "/opt/program/utils/data.py", line 189, in get_data_loaders
+    trainset = bb_zoom_dataset(train_path, train_labels_path, img_size, data_transform=this_transform, augmentation=train_augmentation, crop=crop)
+  File "/opt/program/utils/data.py", line 22, in __init__
+    self.sample_paths = os.listdir(img_root_dir)
+FileNotFoundError: [Errno 2] No such file or directory: 'F:\\7_12_pkg_zoom/images/train'
