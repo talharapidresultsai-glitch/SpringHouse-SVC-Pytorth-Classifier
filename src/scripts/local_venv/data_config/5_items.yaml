@@ -1,0 +1,9 @@
+train: ${DIR}/test_data/images/train/ 
+val:  ${DIR}/test_data/images/val/
+test: ${DIR}/test_data/images/test/
+
+# number of classes
+nc: 5
+
+# class names
+names: ["Kraft Philadelphia Regular Cream Cheese Spread", "Chobani Greek Yogurt Mango On The Bottom", "Orange", "Gluten-free Soy Sauce", "Green Apple"]

@@ -1,0 +1,3 @@
+#!/bin/sh
+python prepare_data.py
+python train.py "$@"
