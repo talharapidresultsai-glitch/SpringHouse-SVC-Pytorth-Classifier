@@ -103,7 +103,7 @@ val_loader = DataLoader(
     batch_size=16
 )
 
-model_data = torch.load('/mnt/data/talha/springhouse-svc-pytorch-classifier/downloaded_model/model.pt', map_location=device);
+model_data = torch.load(model_path, map_location=device);
 if isinstance(model_data, dict):
     class_count = model_data.get('class_count', 36)
     if 'student_state_dict' in model_data:
@@ -258,10 +258,11 @@ for images, labels in val_loader:
             else:
                 incorrect += 1
             
-            # Binary accuracy (Known vs Unknown)
-            is_true_unknown = (true_label == unknown_class_id)
+            # Binary accuracy (Known vs Unknown) - Only checking unknowns
+            # Formula: Correctly predicted Unknown / Total samples
+            ##is_true_unknown = (true_label == unknown_class_id)
             is_pred_unknown = (pred_label == unknown_class_id)
-            if (not is_true_unknown and not is_pred_unknown) or (is_true_unknown and is_pred_unknown):
+            if (is_pred_unknown):
                 binary_correct += 1
     else:
         for i in range(len(predicted)):
